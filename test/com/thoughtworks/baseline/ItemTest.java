@@ -71,4 +71,12 @@ public class ItemTest {
 
         assertEquals(item.hashCode(), item.hashCode());
     }
+
+    @Test
+    public void twoObjectsHavingSameContentHaveSameHashCode() {
+        Item itemOne = new Item("Book", 100, 0);
+        Item itemTwo = new Item("Book", 100, 0);
+
+        assertEquals(itemOne.hashCode(), itemTwo.hashCode());
+    }
 }
