@@ -42,4 +42,12 @@ public class ItemTest {
 
         assertFalse(itemOne.equals(itemTwo));
     }
+
+    @Test
+    public void shouldNotBeEqualToAnotherItemWithASameNameAndGrossCostButDifferentTaxPercent() {
+        Item itemOne = new Item("Book", 100, 0);
+        Item itemTwo = new Item("Book", 100, 10);
+
+        assertFalse(itemOne.equals(itemTwo));
+    }
 }
