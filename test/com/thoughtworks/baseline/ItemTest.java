@@ -59,9 +59,16 @@ public class ItemTest {
     }
 
     @Test
-    public void shoouldNotBeEqualToAnObjectOfAnotherClass() {
+    public void shouldNotBeEqualToAnObjectOfAnotherClass() {
         Item itemOne = new Item("Book", 100, 0);
-        
+
         assertFalse(itemOne.equals("Item"));
+    }
+
+    @Test
+    public void sameObjectsOfItemMustHaveSameHashCodes() {
+        Item item = new Item("book", 100, 10);
+
+        assertEquals(item.hashCode(), item.hashCode());
     }
 }

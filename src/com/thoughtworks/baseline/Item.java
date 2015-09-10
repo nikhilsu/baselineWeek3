@@ -27,4 +27,16 @@ public class Item {
         else
             return false;
     }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = nameOfTheItem != null ? nameOfTheItem.hashCode() : 0;
+        temp = Double.doubleToLongBits(grossCost);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(taxPercentageOnTheItem);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }
