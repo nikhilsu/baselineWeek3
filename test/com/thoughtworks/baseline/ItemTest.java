@@ -57,4 +57,11 @@ public class ItemTest {
 
         assertFalse(itemOne.equals(null));
     }
+
+    @Test
+    public void shoouldNotBeEqualToAnObjectOfAnotherClass() {
+        Item itemOne = new Item("Book", 100, 0);
+        
+        assertFalse(itemOne.equals("Item"));
+    }
 }
