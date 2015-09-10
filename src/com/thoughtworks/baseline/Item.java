@@ -16,4 +16,13 @@ public class Item {
         double netAmount = taxOnItem + this.grossCost;
         return netAmount;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        Item that = (Item) object;
+        if (this.nameOfTheItem.equals(that.nameOfTheItem))
+            return true;
+        else
+            return false;
+    }
 }

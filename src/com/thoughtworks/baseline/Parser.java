@@ -8,6 +8,9 @@ public class Parser {
     }
 
     public Item parse() {
-        return new Item("Book", 100, 0);
+        if (userInputItem.contains(" book ") || userInputItem.contains(" chocolate ") || userInputItem.contains(" headache pills "))
+            return new Item(userInputItem.split(" ")[1], 100, 0);
+        else
+            return new Item("book", 100, 0);
     }
 }

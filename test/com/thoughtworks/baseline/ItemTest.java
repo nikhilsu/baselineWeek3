@@ -26,4 +26,12 @@ public class ItemTest {
 
         assertEquals(115, item.computeNetCost(), 0.0);
     }
+
+    @Test
+    public void shouldNotbeEqualToAnotherItemWithADifferentName() {
+        Item itemOne = new Item("Book", 100, 0);
+        Item itemTwo = new Item("New Book", 100, 0);
+
+        assertFalse(itemOne.equals(itemTwo));
+    }
 }
