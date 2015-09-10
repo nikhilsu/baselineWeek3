@@ -19,6 +19,8 @@ public class Item {
 
     @Override
     public boolean equals(Object object) {
+        if (object == null)
+            return false;
         Item that = (Item) object;
         if (this.nameOfTheItem.equals(that.nameOfTheItem) && this.grossCost == that.grossCost && this.taxPercentageOnTheItem == that.taxPercentageOnTheItem)
             return true;

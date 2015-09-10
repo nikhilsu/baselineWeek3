@@ -50,4 +50,11 @@ public class ItemTest {
 
         assertFalse(itemOne.equals(itemTwo));
     }
+
+    @Test
+    public void shouldNotBeEqualToANullObject() {
+        Item itemOne = new Item("Book", 100, 0);
+
+        assertFalse(itemOne.equals(null));
+    }
 }
