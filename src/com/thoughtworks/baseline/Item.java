@@ -20,7 +20,7 @@ public class Item {
     @Override
     public boolean equals(Object object) {
         Item that = (Item) object;
-        if (this.nameOfTheItem.equals(that.nameOfTheItem))
+        if (this.nameOfTheItem.equals(that.nameOfTheItem) && this.grossCost == that.grossCost)
             return true;
         else
             return false;
