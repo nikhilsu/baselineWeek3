@@ -19,4 +19,11 @@ public class ItemTest {
 
         assertEquals(110, item.computeNetCost(), 0.0);
     }
+
+    @Test
+    public void shouldReturnTheNetAmountOfTheItemAs115WhenTheGrossAmountIs100AndTheTaxPercentIs15() {
+        Item item = new Item("Imported Chocolate", 100, 15);
+
+        assertEquals(115, item.computeNetCost(), 0.0);
+    }
 }
